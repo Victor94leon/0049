@@ -55,4 +55,26 @@ public class Test
         }
         return total;
     }
+    
+    /**
+     * Método que devuelve true si el parámetro "n" es veradero y false en caso contrario
+     */
+    public boolean IsPrime(int n)
+    {
+        boolean esPrimo = true;
+        if (n>1) {
+            int aux = 2;
+            while (aux<n) {
+                if (n%aux==0) {
+                    esPrimo = false;
+                }
+                aux++;
+            }
+        }
+        else {
+            esPrimo = false;
+            System.out.println("[ERROR] Deben introducirse valores mayores que 1");
+        }
+        return esPrimo;
+    }
 }
