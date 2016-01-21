@@ -30,4 +30,23 @@ public class Test
         }
         System.out.println(total);
     }
+    
+    /**
+     * Recibe dos parámetros enteros a y b y muestre la suma de los valores comprendidos
+     * entre dichos parámetros (ambos incluidos) y haz un commit.
+     */
+    public int sumValuesInterval(int a,int b)
+    {
+        int total = 0;    
+        if (b<a) {
+            int c = a; // Variable auxiliar para intercambiar el valor de los parametros
+            a = b; // Se cambian valores para guardar en "a" el valor más pequeño
+            b = c; // Se cambian valores para guardar en "b" el mayor valor (guardado en "c")
+        }
+        while (a<=b) {
+            total = total + a;
+            a++;
+        }        
+        return total;
+    }
 }
