@@ -2,4 +2,7 @@
 comment0.params=
 comment0.target=void\ multiplesOfFive()
 comment0.text=\r\n\ M\u00E9todo\ que\ imprime\ por\ pantalla\ todos\ los\ m\u00FAltiplos\ de\ 5\ entre\ 10\ y\ 95(ambos\ extremos\ excluidos)\r\n
-numComments=1
+comment1.params=
+comment1.target=void\ sumValues()
+comment1.text=\r\n\ Saca\ por\ pantalla\ la\ suma\ de\ los\ n\u00FAmeros\ comprendidos\ entre\ el\ 0\ y\ el\ 10(ambos\ incluidos)\r\n
+numComments=2
