@@ -1,14 +1,8 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ multiplesOfFive()
-comment0.text=\r\n\ M\u00E9todo\ que\ imprime\ por\ pantalla\ todos\ los\ m\u00FAltiplos\ de\ 5\ entre\ 10\ y\ 95(ambos\ extremos\ excluidos)\r\n
+comment0.target=void\ testSumValuesInterval()
+comment0.text=\r\n\ M\u00E9todo\ test\ para\ comprobar\ el\ m\u00E9todo\ sumValuesInterval\r\n
 comment1.params=
-comment1.target=void\ sumValues()
-comment1.text=\r\n\ Saca\ por\ pantalla\ la\ suma\ de\ los\ n\u00FAmeros\ comprendidos\ entre\ el\ 0\ y\ el\ 10(ambos\ incluidos)\r\n
-comment2.params=a\ b
-comment2.target=int\ sumValuesInterval(int,\ int)
-comment2.text=\r\n\ Recibe\ dos\ par\u00E1metros\ enteros\ a\ y\ b\ y\ muestre\ la\ suma\ de\ los\ valores\ comprendidos\r\n\ entre\ dichos\ par\u00E1metros\ (ambos\ incluidos)\ y\ haz\ un\ commit.\r\n
-comment3.params=n
-comment3.target=boolean\ IsPrime(int)
-comment3.text=\r\n\ M\u00E9todo\ que\ devuelve\ true\ si\ el\ par\u00E1metro\ "n"\ es\ veradero\ y\ false\ en\ caso\ contrario\r\n
-numComments=4
+comment1.target=void\ testIsPrime()
+comment1.text=\r\n\ \ M\u00E9todo\ test\ para\ comprobar\ el\ m\u00E9todo\ isPrime\r\n
+numComments=2

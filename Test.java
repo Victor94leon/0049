@@ -1,80 +1,133 @@
 public class Test
-{
+{    
     /**
-     * Método que imprime por pantalla todos los múltiplos de 5 entre 10 y 95(ambos extremos excluidos)
+     * Método test para comprobar el método sumValuesInterval
      */
-    public void multiplesOfFive()
+    public void testSumValuesInterval()
     {
-        int num1 = 10; 
-        int num2 = 95;
-        int multiplo = 5;
-        while (num1<=(num2-multiplo)) {
-            num1++;
-            if (num1%multiplo==0) {
-                System.out.println(num1);
-            }
+        Calculadora calculadora = new Calculadora();
+
+        boolean resultadoCorrecto = true;
+        
+        if (calculadora.sumValuesInterval(1,1)==1) {
+            System.out.println("Comprobando sumValueInterval(1,1)...resultado correcto 1 / resultado  método " + calculadora.sumValuesInterval(1,1) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(1,1)...resultado correcto 1 / resultado  método " + calculadora.sumValuesInterval(1,1) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (calculadora.sumValuesInterval(0,2)==3) {
+            System.out.println("Comprobando sumValueInterval(0,2)...resultado correcto 3 / resultado  método " + calculadora.sumValuesInterval(0,2) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(0,2)...resultado correcto 3 / resultado  método " + calculadora.sumValuesInterval(0,2) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (calculadora.sumValuesInterval(2,1)==3) {
+            System.out.println("Comprobando sumValueInterval(2,1)...resultado correcto 3 / resultado  método " + calculadora.sumValuesInterval(2,1) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(2,1)...resultado correcto 3 / resultado  método " + calculadora.sumValuesInterval(2,1) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (calculadora.sumValuesInterval(2,-1)==-1) {
+            System.out.println("Comprobando sumValueInterval(2,-1)...resultado correcto -1 / resultado  método " + calculadora.sumValuesInterval(2,-1) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(2,-1)...resultado correcto -1 / resultado  método " + calculadora.sumValuesInterval(2,-1) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (calculadora.sumValuesInterval(0,3)==6) {
+            System.out.println("Comprobando sumValueInterval(0,3)...resultado correcto 6 / resultado  método " + calculadora.sumValuesInterval(0,3) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(0,3)...resultado correcto 6 / resultado  método " + calculadora.sumValuesInterval(0,3) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (calculadora.sumValuesInterval(-5,-10)==-1) {
+            System.out.println("Comprobando sumValueInterval(-5,-10)...resultado correcto -1 / resultado  método " + calculadora.sumValuesInterval(-5,-10) + " ...OK");
+        }
+        else {
+            System.out.println("Comprobando sumValueInterval(-5,-10)...resultado correcto -1 / resultado  método " + calculadora.sumValuesInterval(-5,-10) + "...ERROR");
+            resultadoCorrecto = false;
+        } 
+        
+        if (!resultadoCorrecto) {
+            System.out.println("El método NO funciona correctamente");
+        }
+        else {
+            System.out.println("El método SI funciona correctamente");
         }
     }
 
     /**
-     * Saca por pantalla la suma de los números comprendidos entre el 0 y el 10(ambos incluidos)
+     *  Método test para comprobar el método isPrime
      */
-    public void sumValues()
+    public void testIsPrime()
     {
-        int num1 = 0;
-        int num2 = 10;
-        int total = 0;
-        while (num1<=num2) {
-            total = total + num1;
-            num1++;
-        }
-        System.out.println(total);
-    }
+        Calculadora calculadora = new Calculadora();
 
-    /**
-     * Recibe dos parámetros enteros a y b y muestre la suma de los valores comprendidos
-     * entre dichos parámetros (ambos incluidos) y haz un commit.
-     */
-    public int sumValuesInterval(int a,int b)
-    {
-        int total = 0; 
-        if (a>=0 && b>=0){
-            if (b<a) {
-                int c = a; // Variable auxiliar para intercambiar el valor de los parametros
-                a = b; // Se cambian valores para guardar en "a" el valor más pequeño
-                b = c; // Se cambian valores para guardar en "b" el mayor valor (guardado en "c")
-            }
-            while (a<=b) {
-                total = total + a;
-                a++;
-            }    
+        boolean resultadoCorrecto = true;
+
+           
+                if (calculadora.isPrime(-5)){
+            System.out.println("Comprobando isPrime(-5)...resultado correcto true / resultado  método " + calculadora.isPrime(-5) + "...OK");
         }
         else {
-            System.out.println("[ERROR] Deben introducirse valores positivos");
-            total = -1;
+            System.out.println("Comprobando isPrime(-5)...resultado correcto true / resultado  método " + calculadora.isPrime(-5) + "...ERROR");
+            resultadoCorrecto = false;
         }
-        return total;
-    }
-    
-    /**
-     * Método que devuelve true si el parámetro "n" es veradero y false en caso contrario
-     */
-    public boolean IsPrime(int n)
-    {
-        boolean esPrimo = true;
-        if (n>1) {
-            int aux = 2;
-            while (aux<n) {
-                if (n%aux==0) {
-                    esPrimo = false;
-                }
-                aux++;
-            }
+        
+        if (calculadora.isPrime(0)){
+            System.out.println("Comprobando isPrime(0)...resultado correcto true / resultado  método " + calculadora.isPrime(0) + "...OK");
         }
         else {
-            esPrimo = false;
-            System.out.println("[ERROR] Deben introducirse valores mayores que 1");
+            System.out.println("Comprobando isPrime(0)...resultado correcto  true / resultado  método " + calculadora.isPrime(0) + "...ERROR");
+            resultadoCorrecto = false;
         }
-        return esPrimo;
+        
+        if (calculadora.isPrime(2)){
+            System.out.println("Comprobando isPrime(2)...resultado correcto true / resultado  método " + calculadora.isPrime(2) + "...OK");
+        }
+        else {
+            System.out.println("Comprobando isPrime(2)...resultado correcto true / resultado  método " + calculadora.isPrime(2) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (!calculadora.isPrime(4)){
+            System.out.println("Comprobando isPrime(4)...resultado correcto false / resultado  método " + calculadora.isPrime(4) + "...OK");
+        }
+        else {
+            System.out.println("Comprobando isPrime(4)...resultado correcto false / resultado  método " + calculadora.isPrime(4) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+            
+        if (!calculadora.isPrime(10)){
+            System.out.println("Comprobando isPrime(10)...resultado correcto false / resultado  método " + calculadora.isPrime(10) + "...OK");
+        }
+        else {
+            System.out.println("Comprobando isPrime(10)...resultado correcto false / resultado  método " + calculadora.isPrime(10) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+
+        if (calculadora.isPrime(101)){
+            System.out.println("Comprobando isPrime(101)...resultado correcto true / resultado  método " + calculadora.isPrime(101) + "...OK");
+        }
+        else {
+            System.out.println("Comprobando isPrime(101)...resultado correcto true / resultado  método " + calculadora.isPrime(101) + "...ERROR");
+            resultadoCorrecto = false;
+        }
+        
+        if (resultadoCorrecto) {
+            System.out.println("El método SI funciona correctamente");
+        }
+        else {
+            System.out.println("El método NO funciona correctamente");
+        }
     }
 }
