@@ -77,4 +77,23 @@ public class Calculadora
         }
         return esPrimo;
     }
+    
+    /**
+     * Método que realiza multiplicaciones de dos números introducidos mediante parámetros
+     */
+    public int multiplyInt(int num1,int num2)
+    {
+        int total = 0;
+        if (num1<0 || num2<0) {
+            total = -1;
+            System.out.println("[ERROR] Deben introducirse valores positivos");
+        }
+        else {
+            while (num1!=0) {
+                total = total + num2;
+                num1 = num1-1;
+            }
+        }
+        return total;
+    }
 }
